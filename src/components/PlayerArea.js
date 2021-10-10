@@ -37,6 +37,8 @@ const PlayerArea = ({data}) => {
     useEffect(() => {
         if(data?.relatedPlaylists?.length){
             setGalleryData(()=>data.relatedPlaylists)
+        }else{
+            window.open(data.link, "_blank");
         }
     }, [data])
 
